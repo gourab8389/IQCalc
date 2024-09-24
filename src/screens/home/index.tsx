@@ -16,7 +16,7 @@ function Home() {
                 ctx.lineWidth = 3;
             }
         }
-    }, [])
+    }, []);
 
     const startDrawing = (e: React.MouseEvent<HTMLCanvasElement>) => {
         const canvas = canvasRef.current;
