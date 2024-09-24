@@ -21,15 +21,15 @@ function Home() {
     const startDrawing = (e: React.MouseEvent<HTMLCanvasElement>) => {
         const canvas = canvasRef.current;
         if (canvas) {
-            canvas.style.background = "black";
-            const ctx = canvas.getContext("2d");
+            canvas.style.background = 'black';
+            const ctx = canvas.getContext('2d');
             if (ctx) {
                 ctx.beginPath();
                 ctx.moveTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
                 setIsDrawing(true);
             }
         }
-    }
+    };
 
     const stopDrawing = () => {
         setIsDrawing(false);
@@ -51,14 +51,23 @@ function Home() {
     };
 
     return (
-        <canvas
+        <div className="">
+            <div className="w-[50vh] items-center justify-center text-green-700">
+                hello friend
+            </div>
+            <canvas
             ref={canvasRef}
             id="canvas"
             className="absolute top-0 left-0 w-full h-full"
             onMouseDown={startDrawing}
             onMouseOut={stopDrawing}
             onMouseUp={stopDrawing}
+            onMouseMove={draw}
         />
+        <div className="">
+            kamon achis?
+        </div>
+        </div>
     )
 }
 
