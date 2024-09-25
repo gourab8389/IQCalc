@@ -7,6 +7,7 @@ import './index.css';
 import Home from "./screens/home";
 
 
+
 const paths = [
   {
     path: "/",
