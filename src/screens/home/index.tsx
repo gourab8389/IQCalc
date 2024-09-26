@@ -121,7 +121,7 @@ export default function Home() {
                     Reset
                 </Button>
                 <Group className="z-20">
-                    {SWATCHES.map((swatchColor) => (
+                    {SWATCHES.map((swatchColor: string) => (
                         <ColorSwatch
                         key={swatchColor}
                         color={swatchColor}
