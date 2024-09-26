@@ -234,7 +234,7 @@ export default function Home() {
             <canvas
                 ref={canvasRef}
                 id="canvas"
-                className="absolute top-0 left-0 w-full h-full"
+                className="absolute top-0 left-0 w-full h-full z-10"
                 onMouseDown={startDrawing}
                 onMouseOut={stopDrawing}
                 onMouseUp={stopDrawing}
@@ -246,7 +246,7 @@ export default function Home() {
                     <Draggable
                     key={index}
                     defaultPosition={latexPosition}
-                    onStop={(e, data) => setLatexPosition({x:data.x, y:data.y})}
+                    onStop={(_, data) => setLatexPosition({x:data.x, y:data.y})}
                     >
                         <div className="absolute text-white">
                             <div className="latex-content">
